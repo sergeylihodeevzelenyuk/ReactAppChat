@@ -1,0 +1,9 @@
+@import "./assets/Reset.css";
+
+.main {
+  height: 100vh;
+  background-color: #0d0d0d;
+  font-family: Rubik, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
