@@ -11,11 +11,9 @@ const Chat = () => {
   const messages = useSelector((state) => state.messages);
 
   const onMessageClick = (e) => {
-    dispatch(
-      chatActions.removeMessage(
-        e.target.attributes.getNamedItem("data-id").value
-      )
-    );
+    const dataId = e.target.attributes.getNamedItem("data-id").value;
+
+    dispatch(chatActions.removeMessage(dataId));
   };
 
   if (chatRef.current) {

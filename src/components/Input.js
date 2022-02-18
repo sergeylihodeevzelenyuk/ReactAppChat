@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 
 import { chatActions } from "../store/root-reducer";
 
-import { getMessageTime } from "../halpers";
+import { getMessageTime } from "../helpers";
 
 import classes from "./Input.module.css";
 
