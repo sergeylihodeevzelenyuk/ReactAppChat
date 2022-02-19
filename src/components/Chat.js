@@ -11,9 +11,7 @@ const Chat = () => {
   const messages = useSelector((state) => state.messages);
 
   const onMessageClick = (e) => {
-    const dataId = e.target.attributes.getNamedItem("data-id").value;
-
-    dispatch(chatActions.removeMessage(dataId));
+    dispatch(chatActions.removeMessage(e.currentTarget.id));
   };
 
   if (chatRef.current) {
@@ -25,17 +23,13 @@ const Chat = () => {
 
     return (
       <div
-        data-id={id}
+        id={id}
         key={id}
         className={classes.message}
         onClick={onMessageClick}
       >
-        <p data-id={id} className={classes.content}>
-          {content}
-        </p>
-        <p data-id={id} className={classes.time}>
-          {time}
-        </p>
+        <p className={classes.content}>{content} </p>
+        <p className={classes.time}>{time}</p>
       </div>
     );
   };
