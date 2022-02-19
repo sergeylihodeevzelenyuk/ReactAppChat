@@ -5,7 +5,7 @@
 
 .form input {
   width: 100%;
-  padding: 26px 16px;
+  padding: 26px 60px 26px 16px;
   background: rgba(255, 255, 255, 0.1);
   border: none;
   outline: none;
@@ -23,7 +23,7 @@
 
 .form button {
   position: absolute;
-  top: 29px;
+  top: 26px;
   right: 24px;
   width: 24px;
   height: 24px;
