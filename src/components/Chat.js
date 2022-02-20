@@ -18,8 +18,8 @@ const Chat = () => {
     chatRef.current.scrollTop = chatRef.current.scrollHeight;
   }
 
-  const userMessage = (params) => {
-    const { content, id, time } = params;
+  const createUserMessage = (message) => {
+    const { content, id, time } = message;
 
     return (
       <div
@@ -38,13 +38,7 @@ const Chat = () => {
     <div className={classes.chat} ref={chatRef}>
       <div className={classes.header}></div>
       {messages.length !== 0 &&
-        messages.map((message) =>
-          userMessage({
-            content: message.content,
-            id: message.id,
-            time: message.time,
-          })
-        )}
+        messages.map((message) => createUserMessage(message))}
     </div>
   );
 };
