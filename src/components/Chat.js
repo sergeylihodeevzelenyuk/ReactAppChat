@@ -19,7 +19,7 @@ const Chat = () => {
   }
 
   const userMessage = (params) => {
-    const [content, id, time] = params;
+    const { content, id, time } = params;
 
     return (
       <div
@@ -39,7 +39,11 @@ const Chat = () => {
       <div className={classes.header}></div>
       {messages.length !== 0 &&
         messages.map((message) =>
-          userMessage([message.content, message.id, message.time])
+          userMessage({
+            content: message.content,
+            id: message.id,
+            time: message.time,
+          })
         )}
     </div>
   );
